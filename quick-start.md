@@ -53,6 +53,11 @@ function main() {
   await typeormPopulate.initialize()
   await typeormPopulate.createMany("EntityFactory", 5)
 }
+
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});
 ```
 
 Run the seed command
