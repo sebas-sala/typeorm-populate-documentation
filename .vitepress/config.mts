@@ -3,10 +3,8 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
 	title: "TypeORM Populate",
-	description: "A VitePress Site",
+	description: "TypeORM seeder for populating your database with fake data.",
 	themeConfig: {
-		// https://vitepress.dev/reference/default-theme-config
-
 		sidebar: [
 			{
 				text: "Examples",
