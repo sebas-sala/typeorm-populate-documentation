@@ -8,12 +8,12 @@ outline: deep
 npx typeorm-populate <command>
 ```
 
-| Option  |                  Description                  |
-| ------- | :-------------------------------------------: |
-| cli     | Open an interactive cli that has every option |
-| init    |             initialize the files              |
-| seed    |          seed youre database defined          |
-| factoyr |              generates a factory              |
+| Option  |               Description                |
+| ------- | :--------------------------------------: |
+| cli     | an interactive cli that has every option |
+| init    |           initialize the files           |
+| seed    |        seed your database defined        |
+| factory |           generates a factory            |
 
 ## More
 
