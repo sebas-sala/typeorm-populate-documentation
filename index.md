@@ -36,7 +36,7 @@ export class EntityFactory extends Factory<Entity> {
 Add the factory within the seed.ts file, and define some methdos.
 
 ```js
-import factories from "@factories";
+import { UserFactory, PostFactory } from "@/database/factories";
 
 function main() {
   const dataSource = new DataSource({
@@ -48,11 +48,13 @@ function main() {
 
   const typeormPopulate = new TypeormPopulate({
     dataSource,
-    factories,
+    factories: [new UserFactory, new PostFactory]
   });
 
   await typeormPopulate.initialize()
-  await typeormPopulate.createMany("EntityFactory", 5)
+  await typeormPopulate.createMany("EntityFactory", 5, { 
+    relations: true 
+  })
 }
 
 main().catch((error) => {

@@ -37,7 +37,12 @@ function main(){
 
 	const entityFactory = new EntityFactory(dataSource)
 
-	await entityFactory.createOne({})
+	await entityFactory.createOne({
+		data: {
+			anotherEntity: entity2,
+			...
+		}
+	})
 	await entityFactory.createMany()
 }
 ```
